@@ -2,14 +2,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 10px 100px;
-
+    background-color: #ffffffbc;
 }
 
 /* phần titele */
 #title {
     text-align: center;
-    background-color: aqua;
+    background-color: #b9653ead;
+    color: rgba(232, 226, 226, 0.952);
     padding: 10px;
+    border-radius: 20px;
     /* margin: 0px; */
 }
 
@@ -31,10 +33,10 @@ nav #menu li {
 
 nav #menu li a {
     text-decoration: none;
-    
     color: white;
     display: block;
     padding: 10px 20px;
+    border-right: 1px solid white;
 }
 
 nav #menu li a:hover {
@@ -51,43 +53,53 @@ nav #menu li a:hover {
 
 #left_side {
     flex: 30%;
-    background-color: #9ef9d8;
+    background-color: #f1f1f1;
     padding: 10px;
+    border-radius:40px 0px 0px 40px;
+    margin-top: 20px;
 }
 
 #right_side{
     flex: 60%;
-    background-color: #9dffb3;
+    background-color: #b9653ead;
     padding: 10px;
+    border-radius: 0px 40px 40px 0px;
+    margin-top: 20px;
 }
 
 /* Bên trái */
 #flex_container h2 {
     text-align: center;
     margin: 0;
+    color: black;
 }
-
+#left_side li {
+    color: black;
+    text-indent: 5px;
+    line-height: 30px;
+}
 /* bên phải */
+#right_side h2 {
+    padding: 10px
+}
 #right_side #hinh {
     display: block;
     text-align: center;
     
 }
 #right_side #hinh img {
-    width: 50%;
-    
+    width: 50%; 
 }
-
 
 /* Phần trưng bày yến */
 .background {
-    background-color: #9ef9d8;
-    border-radius: 40px;
+    background-color: #b9653ead;
+    border-radius: 30px;
 }
 .background h2 {
     text-align: center;
     padding: 20px;
-    background-color: white;
+    background-color: #f1f1f1;
     border: 1px solid black;
     border-radius: 10px;
     color: black;
@@ -106,7 +118,7 @@ nav #menu li a:hover {
 }
 .one_frame {
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
     background-color: white;
     border-radius: 25px;
 }
@@ -119,17 +131,62 @@ nav #menu li a:hover {
     padding: 10px;
 }
 
+.button_ib {
+    background-color: #f1f1f1; /* Green */
+    border: 2px solid black;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0px 20px 0px;
+    /* animation: change_color_background linear 2s infinite; */
+
+}
+.button_ib a {
+    text-decoration: none;
+    color: black;
+}
+
+.button_ib:hover {
+    background-color: #b9653ead;
+    color: white;
+}
+
+/* Phần cách chế biến */
+#processing #heder_processing {
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    /* animation: change_color_text linear 2s infinite; */
+}
+#processing {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    border: 3px solid #b9653ead;
+}
+
+#processing li {
+    color: black;
+    text-indent: 5px;
+    line-height: 30px;
+}
+
 /* Phần liên hệ */
 footer #Contact_Info {
     text-align: center;
     padding: 20px;
-    background-color: white;
+    background-color: #f1f1f1;
     border: 1px solid black;
     border-radius: 10px;
-    animation: change_color linear 2s infinite;
+    /* animation: change_color_text linear 2s infinite; */
 }
 footer {
-    background-color: #9ef9d8;
+    background-color: #b9653ead;
     border-radius: 25px;
 }
 footer ul {
@@ -139,6 +196,7 @@ footer ul li {
     text-align: center;
     font-size: 20px;
     padding: 5px;
+    color: white;
 }
 
 footer ul li a {
@@ -157,9 +215,22 @@ footer ul li a {
     }
     #left_side{
         flex: 100%;
+        margin: 0px;
+        border-radius: 20px;
+        background-color: #f1f1f1be;
+        border: 2px solid #b9653ead;
+    }
+    #left_side h2 {
+        color: black;
+    }
+    #left_side li {
+        color: black;
     }
     #right_side{
         flex: 100%;
+        border-radius: 20px;
+        border: 2px solid black;
+        margin: 20px 0px;
     }
     .frame {
         flex: 50%;
@@ -192,7 +263,7 @@ footer ul li a {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    animation: change_color_nut linear 6s infinite;
+    animation: change_color_border linear 6s infinite;
     cursor: pointer;
 }
 #phone a {
@@ -208,8 +279,7 @@ footer ul li a {
         color: black;
     }
 }
-
-@keyframes change_color_nut {
+@keyframes change_color_border {
     0% {
         border-color: black;
     }
@@ -218,7 +288,6 @@ footer ul li a {
     }
     40% {
         border-color: #a0a009a8;
-        
     }
     60% {
         border-color: #023c68;
@@ -227,3 +296,11 @@ footer ul li a {
         border-color: #900b7a;
     }     
 } 
+@keyframes change_color_background{
+    0% {
+        background-color: #b9653ead;
+    }
+    20% {
+        background-color: #f1f1f1be;
+    }    
+}  
